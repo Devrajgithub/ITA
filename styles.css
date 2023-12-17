@@ -4,7 +4,53 @@
     font-family: 'Poppins', sans-serif;
 	/* border: 1px solid red; */
 }
-
+.popup-container {
+	width: 500px;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	z-index: 999;
+	text-align: center;
+  }
+  
+  .popup-container img {
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+  }
+  .popup-container .ConName {
+	position: absolute;
+	margin: 20%;
+	/* left: 15%; */
+	color: #fff;
+	font-size: 30px;
+  }
+  
+  .popup-container .details {
+	text-align: center; /* Center align the text inside details */
+  }
+  
+  .popup-container button {
+	display: block;
+	margin: 10px auto; /* Center the button */
+	background-color: #000;
+	color: #fff;
+	height: 50px;
+	width: 120px;
+	border-radius: 30px;
+	border: none;
+  }
+  .popup-container button:hover {
+	background-color: #f44336;
+  }
+  
+  
+  
 .header {
     min-height: 100vh;
     width: 100%;
@@ -16,14 +62,22 @@
 }
 
 nav {
+	position: fixed;
+	background-color: #000000;
+	height: 70px;
+	width: 100%;
     display: flex;
-    padding: 2% 6%;
+    /* padding: 2% 6%; */
     justify-content: space-between;
     align-items: center;
+	z-index: 10000;
 }
 
 nav img {
-    width: 250px;
+	margin-left:20px ;
+	height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .nav-links {
@@ -155,6 +209,12 @@ nav .fa{
 	.dropOfCourse{
 		position:relative;
 		display: none;
+	}
+	.popup-container {
+		width: 300px;
+	}
+	.popup-container .ConName{
+		font-size: 20px;
 	}
 }
 
@@ -342,6 +402,9 @@ h3{
 	margin-left: 0px;
 	margin-right: 15px;
 	}
+	.photos{
+		flex-direction: column;
+	}
 }
 
    /*--- Call To Action ---*/
@@ -395,7 +458,7 @@ h3{
 	justify-content:center;
 	align-items:center;
 	height: 250px;
-	width:20%;
+	width:25%;
 	margin: 5px;
 }
 .Fcontent .row{
@@ -405,6 +468,10 @@ h3{
 }
 .Fcontent .row h2{
 	color: #f44336;
+}
+.Fcontent .row a:hover{
+	color: #0084ff;
+	font-weight: 500;
 }
 .Fcontent a{
 	text-decoration: none;

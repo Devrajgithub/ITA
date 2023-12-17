@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <body>
-    <section class="header">
+    <section class="header" >
         <nav>
             <a href="Coll.html">
                 <img src="logo.jpg" alt="College Logo">
@@ -35,20 +35,32 @@
 						</div>
 					</li>
                     <li><a href="Facilities.html">FACILITIES</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="open-popup-btn" onclick="openPopup()"><a href="#">CONTACT</a></li>
                 </ul>
             </div>
-
+			  
 			<i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
+		<!--popup of contact-->
+		-<div class="popup-container" id="popup">
+			<h2 align="center"class="ConName">Almas Hossain Mollha</h2>
+			<img src="popupBG.jpg">
+
+			<div class="details">
+			  <h2>Contact Details</h2>
+			  <p>Email - ita_govtpoly@rediffmail.com</p>
+			  <p>Phone No. - 03323403757</p>
+			</div>
+			<button onclick="closePopup()">Close Popup</button>
+		  </div>
 		
-        <div class="text-box">
+        <div class="text-box" >
             <h1> Itahar Government Polytechnic </h1>
             <p>  <b>Welcome to Itahar Govt.</b> <br>
 				Itahar Government Polytechnic (ITGP) is the most famuos Polytechnic. Polytechnic..................... <br>
 				Science is about knowing, Engineering is about doing............. <br>
 				An institute which provides your technical passion, the wings to fly.  </p>
-            <a href="" class="hero-btn">Visit Us To Know More</a>
+            <a href="https://polytechnic.wbtetsd.gov.in/itahargovpoly" target="blank" class="hero-btn">Visit Us To Know More</a>
         </div>
     </section>
 	
@@ -212,12 +224,11 @@
 			<div class="col">
 				<div class="row">
 					<h2>Quick Links</h2>
-						<a href="#">HOME</a>
-						<a href="#">About</a>
-						<a href="#">Course</a>
-						<a href="#">Facilities</a>
+						<a href="index.HTML">HOME</a>
+						<a href="about.HTML">About</a>
+						<a href="Facilities.html">Facilities</a>
 						<a href="#">Contact</a>
-						<a href="">IIC</a>
+						<a href="https://iic.mic.gov.in/council-detail/IC202323674">IIC</a>
 				</div>
 			</div>
 			<div class="col">
@@ -262,21 +273,39 @@
 			
 	</section>
 	
-<!--- JavaScript for toggle Menu --->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    var menuIcon = document.querySelector(".fa-bars");
+
+    document.body.addEventListener('click', function (event) {
+        // Check if the click is inside the menu or on the menu icon
+        if (!navLinks.contains(event.target) && event.target !== menuIcon) {
+            hideMenu();
+        }
+    });
+
+    function showMenu() {
+        navLinks.style.display = "block";
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.display = "none";
+        navLinks.style.right = "-200px";
+    }
+</script>
+
 	<script>
-
-		var navLinks = document.getElementById("navLinks");
-		//navLinks.style.display="none";
-		function showMenu(){
-			navLinks.style.display="block";
-			navLinks.style.right = "0";
+		function openPopup() {
+		  document.getElementById('popup').style.display = 'block';
+		  document.getElementById('overlay').style.display = 'block';
 		}
-		function hideMenu(){
-			navLinks.style.display="none";
-			navLinks.style.right = "-200px";
+	
+		function closePopup() {
+		  document.getElementById('popup').style.display = 'none';
+		  document.getElementById('overlay').style.display = 'none';
 		}
-
-	</script>	
+	  </script>
 	
 </body>
 </html>
