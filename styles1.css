@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin-top: 70px; /* Adjusted for fixed navbar */
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    background-color: #000000;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10001;
+}
+
+nav img {
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #28d3f1;
+    display: block;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* drop down start from here*/
+.dropOfCourse {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+.dropOfCourse ul {
+    padding: 0;
+    background-color: #00d5ff52;
+    justify-content: left;
+    text-align: left;
+}
+
+.dropOfCourse li {
+    cursor: pointer;
+}
+
+#course:hover .dropOfCourse {
+    display: block;
+}
+/* ends here*/
+
+.se, .sec, .section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
