@@ -1,0 +1,187 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* border: 1px solid red; */
+}
+
+/* Hide radio inputs */
+input {
+    display:none;
+}
+
+/* Main container styling */
+/* .container {
+    width: 100%;
+    text-align: center;
+} */
+
+/* Header styling */
+h1 {
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    75% {
+        width: 280px;
+    }
+    100% {
+        width: 400px;
+    }
+}
+
+/* Top content styling */
+.top-content {
+    /* background-color: rgb(243, 243, 243); */
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+    /* box-shadow: 3px 3px 5px lightgray; */
+}
+.content{
+    margin: 0 auto 20px auto;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 3px 3px 5px lightgray;
+}
+h3 {
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+    line-height: 10px;
+    padding: 30px;
+    color: white;
+}
+
+/* Label styling */
+label {
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+label:hover {
+    color: black;
+}
+
+
+
+/* Apply styles based on radio button selection */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Add some top margin */
+}
+.top-content label {
+    margin-bottom: 10px; /* Add some bottom margin to labels */
+}
+
+.CST, .EE, .ETCE {
+    display: none;
+    width: 100%;
+    margin-top: 20px; /* Add some top margin to photo categories */
+}
+
+.ALL img, .CST img, .EE img, .ETCE img{
+
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}
+
+/* on mouse hover pic zoom */
+
+/* .ALL img:nth-child(1):hover {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+} */
+
+ /* #check1:checked ~ .container .CST, .EE , .ETCE{
+    display: block;
+}  */
+#check2:checked ~ .container .ALL{display: none;}
+#check3:checked ~ .container .ALL{display: none;}
+#check4:checked ~ .container .ALL{display: none;}
+
+
+
+#check2:checked ~ .container .CST,
+#check3:checked ~ .container .EE,
+#check4:checked ~ .container .ETCE {
+    display: block;
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .top-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content{
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        text-align: center;
+    }
+
+    label {
+        margin: 10px 0;
+        display: block;
+    }
+
+
+    h1 {
+        font-size: 25px;
+    }
+    .ALL img, .CST img, .EE img, .ETCE img{
+
+        height: 200px;
+        width: 370px;
+        object-fit: cover;
+    }
+
+
+
+}
+
