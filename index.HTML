@@ -199,7 +199,7 @@
 			<img src="img/1.jpg">
 			<img src="img/2.jpg">
 			<img src="img/3.jpg">
-			<a href="galery.html"><h6>More ></h6><img src="img/4.jpg"></a>
+			<a href="Galery.html"><h6>More ></h6><img src="img/4.jpg"></a>
 		</div>
 	</div>
 </section>
@@ -273,27 +273,34 @@
 			
 	</section>
 	
-<script>
-    var navLinks = document.getElementById("navLinks");
-    var menuIcon = document.querySelector(".fa-bars");
-
-    document.body.addEventListener('click', function (event) {
-        // Check if the click is inside the menu or on the menu icon
-        if (!navLinks.contains(event.target) && event.target !== menuIcon) {
-            hideMenu();
-        }
-    });
-
-    function showMenu() {
-        navLinks.style.display = "block";
-        navLinks.style.right = "0";
-    }
-
-    function hideMenu() {
-        navLinks.style.display = "none";
-        navLinks.style.right = "-200px";
-    }
-</script>
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		var menuIcon = document.querySelector(".fa-bars");
+	
+		document.body.addEventListener('click', function (event) {
+			// Check if the click is inside the menu or on the menu icon
+			if (!navLinks.contains(event.target) && event.target !== menuIcon) {
+				hideMenu();
+			}
+		});
+	
+		function showMenu() {
+			// Check if the viewport width is less than or equal to 700px
+			if (window.innerWidth <= 700) {
+				navLinks.style.display = "block";
+				navLinks.style.right = "0";
+			}
+		}
+	
+		function hideMenu() {
+			// Check if the viewport width is less than or equal to 700px
+			if (window.innerWidth <= 700) {
+				navLinks.style.display = "none";
+				navLinks.style.right = "-200px";
+			}
+		}
+	</script>
+	
 
 	<script>
 		function openPopup() {
