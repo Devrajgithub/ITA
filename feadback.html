@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<style>
+/* CSS styles for the form */
+form {
+max-width: 400px;
+margin: 0 auto;
+}
+label {
+display: block;
+margin-top: 10px;
+}
+input[type="text"],
+textarea {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+}
+input[type="submit"] {
+background-color: #1fe025;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+    <h2 align="center">Feedback Form </h2>
+<form action="submit-feedback.php" method="POST">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email id">Email id:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
