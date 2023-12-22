@@ -26,21 +26,55 @@ padding: 10px 20px;
 cursor: pointer;
 }
 
+input[type="Refresh page"] {
+background-color: #2409ee;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
 </style>
 </head>
 <body>
     <h2 align="center">Feedback Form </h2>
 <form action="submit-feedback.php" method="POST">
-<label for="name">Name:</label>
+    <div class="mb-4 small">
+      Please provide your feedback in the form below
+        </div>
+<label for="name">Name:-</label>
 <input type="text" id="name" name="name" required>
 
-<label for="email id">Email id:</label>
+<label for="email id">Email id:-</label>
 <input type="email" id="email" name="email" required>
+<form name="feedback_form" id="feedback_form" method="post">
+    <label>How do you rate your overall experience?</label>
+    <div class="mb-3 d-flex flex-row py-1">
+      <div class="form-check mr-3">
+      <input class="form-check-input" type="radio" name="rating" id="rating_bad" value="bad">
+      <label class="form-check-label" for="rating_bad">
+        Bad😔
+      </label>
+      </div>
+      <div class="form-check mx-3">
+      <input class="form-check-input" type="radio" name="rating" id="rating_good" value="good">
+      <label class="form-check-label" for="rating_good">
+        Good 😊
+      </label>
+      </div>
+      <div class="form-check mx-3">
+      <input class="form-check-input"  type="radio" name="rating" id="rating_excellent" value="excellent">
+      <label class="form-check-label" for="rating_excellent">
+        Excellent!😘
+      </label>
+      </div>
+    </div>
 
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="4" required></textarea>
+<label for="message">feedback:-</label>
+<textarea id="message" name="message" rows="6" required></textarea>
 
 <input type="submit" value="Submit">
+<input type="button" value="Refresh Page" onClick="Refresh page">
 
 </form>
 </body>
