@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="q.css" />
+  <title>Feedback and Complaint Page</title>
+</head>
+<body>
+  <section>
+    <h2 align="center" class="feedback_heading">~:Grievance Register:~</h2>
+    <form  action="Connect.php1.php" method="post">
+      
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="applicant_cat_id">Grievance From:-<span class="text-danger"></span></label>
+        <div class="col-sm-8">
+          <select class="form-control"id="select" name="applicant_cat_id">
+            <option>-- Select --</option>
+            <option value="Student" >Student</option>
+            <option>Parent</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group"id="Student">
+        <label class="control-label col-sm-3" for="pwd">Name of the Course:-<span class="text-danger"></span></label>
+        <div class="col-sm-8">
+          <select class="form-control select2 select2-hidden-accessible" id="course_name" name="course_name" style="width: 100%;" tabindex="-1" aria-hidden="true" required>
+            <option>-- Select --</option>
+            <option>COMPUTER SCIENCE AND TECHNOLOGY</option>
+            <option>ELECTRICAL ENGINEERING</option>
+            <option>ELECTRONICS & TELECOMMUNICATION</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group"id="Student">
+        <label class="control-label col-sm-3">Semester :-<span class="text-danger"></span></label>
+        <div class="col-sm-8">
+          <select class="form-control" id="select" name="semester" required>
+            <option>-- Select --</option>
+            <option >1st</option>
+            <option >2nd</option>
+            <option>3rd</option>
+            <option >4th</option>
+            <option >5th</option>
+            <option >6th</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group"id="Student">
+        <label class="control-label col-sm-3" for="pwd">Registration No:-<span class="text-danger"></span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" maxlength="12" value="" placeholder="Registration No" name="registration_no">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="Email_Id">Email Id:-<span class="text-danger"></span></label>
+        <div class="col-sm-8">
+          <input type="email" class="form-control"  placeholder="Email Id"  name="Email_Id" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="mobile_no">Mobile Number:-<span class="text-danger"></span></label>
+        <div class="col-sm-8">
+        <select name="phonecode"><option selected hidden value="" required>--Select Code--</option><option value="+91">+91</option><option value="+92">+92</option>
+            <option value="+93">+93</option></select> <input type="text" class="form-controll" maxlength="10" value="" placeholder="Mobile Number" name="Mobile Number:">
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="pwd">Details of the Grievance:-<span class="text-danger"></span><br>(Note more than 300 Character) </label>
+        <div class="col-sm-8">
+          <textarea class="form-control" maxlength="300" name="initial_grievance_text" id="exampleFormControlTextarea2" required rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="col-sm-offset-2 col-sm-10 text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>

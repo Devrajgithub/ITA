@@ -1,0 +1,125 @@
+/* Add this CSS to style your form */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+h2.feedback_heading {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.text-danger {
+  color: red;
+}
+
+/* Add this CSS to style the button */
+.btn-primary {
+  background-color: #4a03ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add this CSS to style the form inputs */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Add this CSS to style the textarea */
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Add this CSS for responsive styling */
+@media (max-width: 768px) {
+  .form-control {
+    width: 100%;
+  }
+}
+
+/* Add this CSS to style the form select */
+select {
+  width: 30%;
+  padding: 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  
+}
+
+/* Add this CSS to style the form inputs*/
+.form-controll {
+  width: 58%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Add this CSS to style the textarea */
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Add this CSS for responsive styling */
+@media (max-width: 768px) {
+  .form-control {
+    width: 100%;
+  }
+}
+
+/* Add this CSS to style the form select */
+select {
+  width: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  
+}
+
+
+/* Add this CSS for form layout */
+.col-sm-3 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-sm-8 {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+}
+#select option[value="Student"] ~ #Student {
+  display: none;
+}
+
+
