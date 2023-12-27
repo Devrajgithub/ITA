@@ -40,13 +40,16 @@ h1::before {
 
 @keyframes animate {
     0% {
+        width: 50px;
+    }
+    25% {
         width: 100px;
     }
     50% {
         width: 200px;
     }
     75% {
-        width: 280px;
+        width: 300px;
     }
     100% {
         width: 400px;
